@@ -4,9 +4,105 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width initial-scale=1">
         <link rel="stylesheet" href="style.css">
-        <title>C++ Documentaion</title>
+        <title>C++ Documentation</title>
     </head>
+        <div class="container">
+            <nav id="navbar">
+                <header>C++ Documentation</header>
+                <a href="#Standard_Input_Stream" class="nav-link">Standard Input Stream</a>
+                <a href="#Standard_Output_Stream" class="nav-link">Standard Output Stream</a>
+                <a href="#Array_Class" class="nav-link">Array Class</a>
+                <a href="#Vector" class="nav-link">Vector</a>
+                <a href="#Map" class="nav-link">Map</a>
+            </nav>
+            <main id="main-doc">
+                <section id="Standard_Input_Stream" class="main-section">
+                    <header>Standard Input Stream</header>
+                    <p>
+                    	Object of class istream that represents the standard input stream oriented to narrow characters (of type char). It corresponds to the C stream stdin.
+                    </p>
+                    <p>
+                    	The standard input stream is a source of characters determined by the environment. It is generally assumed to be input from an external source, such as the keyboard or a file.
+                    </p>
+                    <p>
+                    	The object is declared in header &lt;iostream&gt; with external linkage and static duration: it lasts the entire duration of the program.
+                    </p>
+                </section>
+                <section id="Standard_Output_Stream" class="main-section">
+                    <header>Standard Output Stream</header>
+                    <p>
+                    	Object of class ostream that represents the standard output stream oriented to narrow characters (of type char). It corresponds to the C stream stdout.
+                    </p>
+                    <p>
+                    	The standard output stream is the default destination of characters determined by the environment. This destination may be shared with more standard objects (such as cerr or clog).
+                    </p>
+                    <p>
+                    	The object is declared in header <iostream> with external linkage and static duration: it lasts the entire duration of the program.
+                    </p>
+                </section>
+                <section id="Array_Class" class="main-section">
+                    <header>Array Class</header>
+                    <p>
+                    	Arrays are fixed-size sequence containers: they hold a specific number of elements ordered in a strict linear sequence.
+                    </p>
+                    <p>
+                    	Unlike the other standard containers, arrays have a fixed size and do not manage the allocation of its elements through an allocator: they are an aggregate type encapsulating a fixed-size array of elements. Therefore, they cannot be expanded or contracted dynamically (see vector for a similar container that can be expanded).
+                    </p>
+                    <p>
+                    	Unlike with the other containers in the Standard Library, swapping two array containers is a linear operation that involves swapping all the elements in the ranges individually, which generally is a considerably less efficient operation. On the other side, this allows the iterators to elements in both containers to keep their original container association.
+                    </p>
+                    <code>for ( auto it = myarray.begin(); it != myarray.end(); ++it )</code>
+                    <code>std::cout << ' ' << *it;</code>
+                </section>
+                <section id="Vector" class="main-section">
+                    <header>Vector</header>
+                    <p>
+                    	Vectors are sequence containers representing arrays that can change in size.
+					</p>
+					<p>
+						Just like arrays, vectors use contiguous storage locations for their elements, which means that their elements can also be accessed using offsets on regular pointers to its elements, and just as efficiently as in arrays. But unlike arrays, their size can change dynamically, with their storage being handled automatically by the container.
+					</p>
+					<p>
+						Therefore, compared to arrays, vectors consume more memory in exchange for the ability to manage storage and grow dynamically in an efficient way.
 
+					</p>
+					<p>
+						Container Properties
+						<ul>
+							<li>
+								Sequence: Elements in sequence containers are ordered in a strict linear sequence. Individual elements are accessed by their position in this sequence.
+							</li>
+							<li>
+								Dynamic array: Allows direct access to any element in the sequence, even through pointer arithmetics, and provides relatively fast addition/removal of elements at the end of the sequence.
+							</li>
+							<li>
+								Allocator-aware: The container uses an allocator object to dynamically handle its storage needs.
+							</li>
+						</ul>
+					</p>
+					<code>// assign some values:</code>
+					<code>for (unsigned i=0; i&lt;sz; i++) myvector[i]=i;</code>
+                </section>
+                <section id="Map" class="main-section">
+                    <header>Map</header>
+                    <p>
+                    	Maps are associative containers that store elements formed by a combination of a key value and a mapped value, following a specific order.
+                    </p>
+                    <p>
+                    	In a map, the key values are generally used to sort and uniquely identify the elements, while the mapped values store the content associated to this key. The types of key and mapped value may differ, and are grouped together in member type value_type, which is a pair type combining both:
+                    </p>
+                    <code>typedef pair&lt;const Key, T&gt; value_type;</code>
+                    <p>
+                    	Internally, the elements in a map are always sorted by its key following a specific strict weak ordering criterion indicated by its internal comparison object (of type Compare). The mapped values in a map can be accessed directly by their corresponding key using the bracket operator ((operator[]). Maps are typically implemented as binary search trees.
+                    </p>
+                    <code>std::map&lt;char,std::string&gt; mymap;</code>
+                    <code>mymap['a']="an element";</code>
+					<code>mymap['b']="another element";</code>
+  					<code>mymap['c']=mymap['b'];</code>
+
+                </section>
+            </main>
+        </div>
     <body>
         
     </body>
