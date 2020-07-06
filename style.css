@@ -1,5 +1,7 @@
-
-
+body {
+	color: #4d4e53;
+	font-family: 'Lato', 'Open Sans', Arial, sans-serif;
+}
 
 .container {
 	display: grid;
