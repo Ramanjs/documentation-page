@@ -1,11 +1,23 @@
 .container {
-	/*display: flex;*/
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "navbar main-doc";
+
 }
 
 nav {
+	grid-area: navbar;
+	height: 100%;
+	position: fixed;
 	display: flex;
 	flex-direction: column;
 }
+
+main {
+	grid-area: main-doc;
+}
+
 code {
 	display: block;
 	white-space: pre-wrap;
