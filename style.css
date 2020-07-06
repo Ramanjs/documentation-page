@@ -17,6 +17,7 @@ nav {
 	position: fixed;
 	display: flex;
 	flex-direction: column;
+	border-right: solid 2px black;
 }
 
 main {
@@ -33,6 +34,7 @@ code {
 header {
 	font-size: 30px;
 	margin-bottom: 20px;
+	padding-right: 10px;
 }
 
 .nav-link {
@@ -43,4 +45,8 @@ header {
 	border-top-style: solid;
 	border-top-color: black;
 	border-top-width: 2px; 
+}
+
+section {
+	margin: 40px 20px;
 }
